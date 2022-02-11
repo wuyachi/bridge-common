@@ -163,7 +163,7 @@ func (c *Client) GetSideChainMsgHeight(chainId uint64) (height uint64, err error
 }
 
 func (c *Client) GetSideChainHeight(chainId uint64) (height uint64, err error) {
-	if chainId == base.NEO {
+	if chainId == base.NEO || chainId == base.NEO3 {
 		return c.GetSideChainConsensusHeight(chainId)
 	}
 	var id [8]byte
