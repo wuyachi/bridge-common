@@ -53,6 +53,10 @@ const (
 	ENV = "mainnet"
 )
 
+const (
+	Neo3MagicNum uint32 = 860833102
+)
+
 var CHAINS = []uint64{
 	POLY, ETH, BSC, HECO, OK, ONT, NEO, NEO3, HEIMDALL, MATIC, SWITCHEO, O3, PLT, ARBITRUM, XDAI, OPTIMISM, FANTOM, AVA, METIS, BOBA, PIXIE,
 }

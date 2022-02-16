@@ -41,6 +41,10 @@ const (
 	ENV = "devnet"
 )
 
+const (
+	Neo3MagicNum uint32 = 877933390
+)
+
 var CHAINS = []uint64{POLY, ETH, ONT, NEO, BSC, HECO, O3, OK, MATIC, METIS, RINKEBY, PIXIE}
 
 var ETH_CHAINS = []uint64{
