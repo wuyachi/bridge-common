@@ -60,18 +60,17 @@ func (w *Neo3Wallet) Invoke(script []byte) (hash string, err error) {
 	return w.SendInvocation(script)
 }
 
-func (w *Neo3Wallet) InvokeWithAccount(nep6Wallet *wallet.NEP6Wallet, script []byte) (hash string, err error) {
-	return w.SendInvocationWithAccount(nep6Wallet, script)
-}
+//func (w *Neo3Wallet) InvokeWithAccount(nep6Wallet *wallet.NEP6Wallet, script []byte) (hash string, err error) {
+//	return w.SendInvocationWithAccount(nep6Wallet, script)
+//}
 
-func (w *Neo3Wallet) SendInvocation(script []byte) (hash string, err error) {
-	return w.SendInvocationWithAccount(w.NEP6Wallet, script)
-}
+//func (w *Neo3Wallet) SendInvocation(script []byte) (hash string, err error) {
+//	return w.SendInvocationWithAccount(w.NEP6Wallet, script)
+//}
 
-func (w *Neo3Wallet) SendInvocationWithAccount(
-	nep6Wallet *wallet.NEP6Wallet, script []byte) (hash string, err error) {
+func (w *Neo3Wallet) SendInvocationWithAccount(script []byte) (hash string, err error) {
 	client := w.sdk.Node()
-	wh := wallet.NewWalletHelperFromWallet(client, nep6Wallet)
+	wh := wallet.NewWalletHelperFromWallet(client, w.NEP6Wallet)
 	balancesGas, err := wh.GetAccountAndBalance(tx.GasToken)
 	if err != nil {
 		err = fmt.Errorf("WalletHelper.GetAccountAndBalance err %s", err)
