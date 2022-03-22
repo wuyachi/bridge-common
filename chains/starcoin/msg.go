@@ -15,6 +15,11 @@ type CrossChainEvent struct {
 	RawData              []byte
 }
 
+type StarcoinToPolyHeaderOrCrossChainMsg struct {
+	EventIndex *int    `json:"event_index,omitempty"`
+	AccessPath *string `json:"access_path,omitempty"`
+}
+
 func DeserializeCrossChainEvent(input []byte) (CrossChainEvent, error) {
 	if input == nil {
 		var obj CrossChainEvent
