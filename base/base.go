@@ -148,7 +148,7 @@ func BlocksToSkip(chainId uint64) uint64 {
 	case PIXIE:
 		return 2
 	case STARCOIN:
-		return 33
+		return 70
 	default:
 		return 1
 	}
@@ -171,7 +171,7 @@ func BlocksToWait(chainId uint64) uint64 {
 	case PIXIE:
 		return 3
 	case STARCOIN:
-		return 36
+		return 72
 	default:
 		return 100000000
 	}
