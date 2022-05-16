@@ -18,6 +18,7 @@
 package ok
 
 import (
+	"github.com/polynetwork/bridge-common/log"
 	"math"
 	"sync/atomic"
 	"time"
@@ -61,6 +62,7 @@ func (c *Client) QueryCommitResult(height uint64) (*ttypes.ResultCommit, error) 
 	if err != nil {
 		if w := atomic.LoadUint64(c.weight); w > 0 {
 			atomic.StoreUint64(c.weight, w-1)
+			log.Error("QueryCommitResult err ", "err", err, "node", c.address, "weight", c.weight)
 		}
 		return nil, err
 	}
@@ -72,6 +74,7 @@ func (c *Client) GetValidators(height uint64) (validators []*types.Validator, er
 	if err != nil {
 		if w := atomic.LoadUint64(c.weight); w > 0 {
 			atomic.StoreUint64(c.weight, w-1)
+			log.Error("QueryValidatorsResult err ", "err", err, "node", c.address, "weight", c.weight)
 		}
 		return nil, err
 	}
