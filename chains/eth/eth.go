@@ -19,6 +19,7 @@ package eth
 
 import (
 	"context"
+	"github.com/polynetwork/bridge-common/log"
 	"math/big"
 	"time"
 
@@ -61,6 +62,7 @@ func (c *Client) GetLatestHeight() (uint64, error) {
 	var result hexutil.Big
 	err := c.Rpc.CallContext(context.Background(), &result, "eth_blockNumber")
 	for err != nil {
+		log.Error("eth node GetLatestHeight", "url", c.address, "error", err)
 		return 0, err
 	}
 	return (*big.Int)(&result).Uint64(), err
