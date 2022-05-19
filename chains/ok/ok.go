@@ -18,6 +18,7 @@
 package ok
 
 import (
+	"fmt"
 	"github.com/polynetwork/bridge-common/log"
 	"math"
 	"sync/atomic"
@@ -59,6 +60,10 @@ func (c *Client) GetLatestHeight() (uint64, error) {
 
 func (c *Client) QueryCommitResult(height uint64) (*ttypes.ResultCommit, error) {
 	cr, err := c.Tendermint().QueryCommitResult(int64(height))
+	testUrl := "http://10.203.0.33:26657"
+	if testUrl == c.Address() {
+		err = fmt.Errorf("%s debug error", testUrl)
+	}
 	if err != nil {
 		if w := atomic.LoadUint64(c.weight); w > 0 {
 			atomic.StoreUint64(c.weight, w-1)
