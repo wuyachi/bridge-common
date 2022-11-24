@@ -38,27 +38,35 @@ require (
 	github.com/FactomProject/basen v0.0.0-20150613233007-fe3947df716e // indirect
 	github.com/JohnCGriffin/overflow v0.0.0-20170615021017-4d914c927216 // indirect
 	github.com/VictoriaMetrics/fastcache v1.6.0 // indirect
+	github.com/aristanetworks/goarista v0.0.0-20170210015632-ea17b1a17847 // indirect
 	github.com/blocktree/go-owcrypt v1.1.10 // indirect
 	github.com/btcsuite/btcd v0.22.0-beta // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/drand/kyber v1.1.4 // indirect
+	github.com/edsrzf/mmap-go v1.0.0 // indirect
 	github.com/emirpasic/gods v1.12.0 // indirect
+	github.com/gballet/go-libpcsclite v0.0.0-20190607065134-2772fd86a8ff // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect
+	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/uuid v1.1.5 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.5-0.20210104140557-80c98217689d // indirect
-	github.com/holiman/bloomfilter/v2 v2.0.3 // indirect
 	github.com/holiman/uint256 v1.2.0 // indirect
+	github.com/huin/goupnp v1.0.0 // indirect
 	github.com/itchyny/base58-go v0.1.0 // indirect
+	github.com/jackpal/go-nat-pmp v1.0.2-0.20160603034137-1fa385a6f458 // indirect
+	github.com/karalabe/usb v0.0.0-20190919080040-51dc0efba356 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/ontio/go-bip32 v0.0.0-20190520025953-d3cea6894a2b // indirect
 	github.com/ontio/ontology-eventbus v0.9.1 // indirect
 	github.com/ontio/wagon v0.4.1 // indirect
 	github.com/orcaman/concurrent-map v0.0.0-20190826125027-8c72a8bb44f6 // indirect
+	github.com/pborman/uuid v1.2.0 // indirect
+	github.com/peterh/liner v1.1.1-0.20190123174540-a2c9a5303de7 // indirect
 	github.com/phoreproject/bls v0.0.0-20200525203911-a88a5ae26844 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
@@ -67,13 +75,20 @@ require (
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/steakknife/bloomfilter v0.0.0-20180922174646-6819c0d2a570 // indirect
+	github.com/steakknife/hamming v0.0.0-20180906055917-c99c65617cd3 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7 // indirect
 	github.com/the729/lcs v0.1.5 // indirect
 	github.com/tklauser/go-sysconf v0.3.5 // indirect
 	github.com/tklauser/numcpus v0.2.2 // indirect
 	github.com/tyler-smith/go-bip39 v1.0.2 // indirect
+	github.com/wsddn/go-ecdh v0.0.0-20161211032359-48726bab9208 // indirect
+	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
 	golang.org/x/text v0.3.6 // indirect
+	google.golang.org/protobuf v1.23.0 // indirect
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
+
+replace github.com/ethereum/go-ethereum v1.10.11 => github.com/ethereum/go-ethereum v1.9.25
